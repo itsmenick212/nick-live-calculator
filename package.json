@@ -17,14 +17,17 @@
   },
   "homepage": "https://github.com/itsmenick212/nick-live-calculator#readme",
   "devDependencies": {
+    "babel-preset-es2020": "^1.0.2",
     "file-loader": "^6.1.1",
     "install": "^0.13.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "webpack-cli": "^4.1.0",
+    "webpack-merge": "^5.2.0"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
-    "babel-preset-es2020": "^1.0.2",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.19.0",
     "bulma": "^0.9.1",
