@@ -8,7 +8,7 @@ var io = require('socket.io')(server);
 var compiler = webpack(config);
 var port = process.env.port || 8080;
 
-calc.use(express.static(path.join(__dirname, '/')))
+calc.use(express.static(path.join(__dirname, '/')));
 
 // use in develope mode
 calc.use(require('webpack-dev-middleware')(compiler, {
@@ -20,7 +20,7 @@ calc.use(require('webpack-hot-middleware')(compiler));
 
 calc.get('/', function(req, res){
     res.sendFile(path.join(__dirname, 'index.html'));
-})
+});
 
 var onlineUsers = {};
 var onlineCount = 0;
@@ -63,8 +63,8 @@ io.on('connection', function(socket) {
         console.log(obj.username+" Calculated "+ obj.message)
     })
 
-})
+});
 
 server.listen(port, function(err) {
     console.log('This server is running on port *:8080');
-})
+});
