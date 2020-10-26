@@ -1,0 +1,52 @@
+{
+  "name": "nick-live-calculator",
+  "version": "1.0.0",
+  "description": "Nicks live calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmenick212/nick-live-calculator.git"
+  },
+  "author": "Nick Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsmenick212/nick-live-calculator/issues"
+  },
+  "homepage": "https://github.com/itsmenick212/nick-live-calculator#readme",
+  "devDependencies": {
+    "file-loader": "^6.1.1",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2020": "^1.0.2",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "bulma": "^0.9.1",
+    "cookie-parser": "^1.4.5",
+    "css-loader": "^5.0.0",
+    "debug": "^4.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-jwt-authz": "^2.4.1",
+    "moment": "^2.29.1",
+    "node": "^15.0.1",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "sass-loader": "^10.0.4",
+    "socket.io": "^2.3.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.2.0",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
