@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/itsmenick212/nick-live-calculator#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "babel-preset-es2020": "^1.0.2",
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^6.1.1",
@@ -36,6 +39,7 @@
     "cookie-parser": "^1.4.5",
     "css-loader": "^5.0.0",
     "debug": "^4.2.0",
+    "eiows": "^3.3.2",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "express-jwt-authz": "^2.4.1",
@@ -53,5 +57,9 @@
     "webpack": "^5.2.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
+  },
+  "optionalDependencies": {
+        "bufferutil": "^4.0.1",
+        "utf-8-validate": "^5.0.2"
   }
 }
