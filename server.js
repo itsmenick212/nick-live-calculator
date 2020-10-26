@@ -10,11 +10,11 @@ var port = process.env.port || 8080;
 
 calc.use(express.static(path.join(__dirname, '/')));
 
-// use in develope mode
 calc.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
 }));
+
 calc.use(require('webpack-hot-middleware')(compiler));
 
 
@@ -25,26 +25,22 @@ calc.get('/', function(req, res){
 var onlineUsers = {};
 var onlineCount = 0;
 
-// listen to client login
 io.on('connection', function(socket) {
 
     socket.on('login', function(obj){
 
-        // let user.id = socket.id
         socket.id = obj.uid;
 
-        // add the new user to the list, count++
+        // add the new user to the list, onlineCount++
         if (!onlineUsers.hasOwnProperty(obj.uid)) {
             onlineUsers[obj.uid] = obj.username;
             onlineCount++;
         }
 
-        // send 'login' event and related objs to client
         io.emit('login', {onlineUsers:onlineUsers, onlineCount:onlineCount, user:obj});
         console.log(obj.username+'connect to the Calculator');
     })
 
-//listen to client leave
     socket.on('disconnect', function() {
         if(onlineUsers.hasOwnProperty(socket.id)) {
             var obj = {uid:socket.id, username:onlineUsers[socket.id]};
@@ -57,7 +53,6 @@ io.on('connection', function(socket) {
         }
     })
 
-    // listen to the message(results)
     socket.on('message', function(obj){
         io.emit('message', obj);
         console.log(obj.username+" Calculated "+ obj.message)
